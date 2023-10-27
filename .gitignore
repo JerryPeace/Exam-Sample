@@ -36,6 +36,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+.env
+.env*
 !.env.example
 cdk/cdk.out
 env.js
@@ -46,3 +48,4 @@ env.js
 # ides
 .vscode
 .idea
+node_modules
