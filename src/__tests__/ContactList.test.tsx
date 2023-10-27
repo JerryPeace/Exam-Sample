@@ -35,6 +35,7 @@ describe('Home Page with mocked getAllContacts', () => {
       );
     });
   });
+
   afterEach(cleanup);
 
   test('renders contact names from API', async () => {

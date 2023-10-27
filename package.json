@@ -85,6 +85,7 @@
   "jest": {
     "moduleNameMapper": {
       "^@@src/(.*)$": "<rootDir>/src/$1",
+      "^@@pages/(.*)$": "<rootDir>/pages/$1",
       "^@@configs$": "<rootDir>/config.ts"
     },
     "testEnvironment": "jest-environment-jsdom",
