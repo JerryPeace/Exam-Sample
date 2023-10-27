@@ -26,6 +26,7 @@ import Contact from '@@src/components/Contact';
 import UserFieldsForm from '@@src/components/UserFieldsForm';
 import DeleteConfirmModal from '@@src/components/DeleteConfirmModal';
 import FullLoading from '@@src/components/FullLoading';
+import { routerConfig } from '@@src/constants/routes';
 
 const Home: NextPage = () => {
   const [isAsc, setIsAsc] = useState(true);
@@ -73,7 +74,7 @@ const Home: NextPage = () => {
   return (
     <Box className="w-full">
       <Head>
-        <meta name="description" content="Neptune Benchmark Data Management" />
+        <meta name="description" content="Contact App" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -81,7 +82,7 @@ const Home: NextPage = () => {
       <main>
         <Box id="main-title" className="p-3">
           <HStack justifyContent={'space-between'}>
-            <Link href="/neptune">
+            <Link href={routerConfig.home}>
               <b>Contact List</b>
             </Link>
             <Button
