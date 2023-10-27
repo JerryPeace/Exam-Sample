@@ -81,7 +81,7 @@ const Home: NextPage = () => {
       <main>
         <Box id="main-title" className="p-3">
           <HStack justifyContent={'space-between'}>
-            <Link>
+            <Link href="/neptune">
               <b>Contact List</b>
             </Link>
             <Button
