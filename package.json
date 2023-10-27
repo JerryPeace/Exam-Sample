@@ -81,16 +81,5 @@
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.7",
     "typescript": "^5.2.2"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^@@src/(.*)$": "<rootDir>/src/$1",
-      "^@@pages/(.*)$": "<rootDir>/pages/$1",
-      "^@@configs$": "<rootDir>/config.ts"
-    },
-    "testEnvironment": "jest-environment-jsdom",
-    "roots": [
-      "<rootDir>"
-    ]
   }
 }

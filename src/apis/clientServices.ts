@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import { toast } from 'react-toastify';
-import { NEXT_CLIENT_API_PATH, NODE_ENV } from '@@configs';
+import { NEXT_CLIENT_API_PATH, NODE_ENV } from '../../config';
 
 const general = axios.create({ baseURL: NEXT_CLIENT_API_PATH });
 const enhance = axios.create({ baseURL: NEXT_CLIENT_API_PATH });

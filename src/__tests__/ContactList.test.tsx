@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { render, screen, waitFor, fireEvent, cleanup, act } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Home from '@@pages/index';
