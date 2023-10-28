@@ -1,16 +1,18 @@
 
 # Contact APP
 
-### Overview
+Contact-app is a comprehensive full-stack solution developed using Next.js, providing a seamless experience for users to manage their contacts.
 
-The Contact-app is a robust solution built on top of Next.js - a comprehensive full-stack server solution.
-
-#### Prerequisites
+### Prerequisites
 *  Requires Node version (v16.20.1)
+*  Requires pnpm 6
 
-### Run UI service in local
 
-  #### Run app server by docker compose (Recommendation)
+### Setup & Running Instructions
+
+### 1. Running the UI service
+
+  #### Using Docker Compose (Recommended)
   Clone the repository from GitHub and navigate to the root directory of the app.
   You can review the docker-compose.yml file for detailed docker configurations.
 
@@ -23,7 +25,7 @@ The Contact-app is a robust solution built on top of Next.js - a comprehensive f
 
   #### Development by local
   Clone the repository from GitHub and navigate to the root directory of the app.
-  (Requires Node version v16.20.1)
+  (Requires pnpm 6)
 
   #### Run NEXT.JS server
   ```
@@ -32,10 +34,15 @@ The Contact-app is a robust solution built on top of Next.js - a comprehensive f
   open http://localhost:3001/neptune
   ```
 
+### 2. Running App Tests
+  I use Jest and React Testing Library, React Testing Library is a JavaScript testing utility built specifically to test React components. It simulates user interactions on isolated components and asserts their outputs to ensure the UI is behaving correctly.
+  ```
+  pnpm run test
+  ```
 
-### Run API service in local
+### 3. Setting up the API service
 
-API repo is https://github.com/resumecompanion/taroko_server.git, Please run api server in local according to README content
+For the backend API service, refer to https://github.com/resumecompanion/taroko_server.git.
 
-API Local Path
+Local API Endpoint:
 http://localhost:3000/api
