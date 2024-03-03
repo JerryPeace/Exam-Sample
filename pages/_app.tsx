@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { Hydrate, QueryClient, QueryClientProvider } from 'react-query';
 import { Flex, ChakraProvider } from '@chakra-ui/react';
 import ErrorBoundary from '@@components/Error/ErrorBoundary';
-import '../styles/user.css';
+import '../styles/app.css';
 import '../styles/globals.css';
 import '../styles/icons/style.css';
 import 'tailwindcss/tailwind.css';
