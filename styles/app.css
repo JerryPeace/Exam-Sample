@@ -14,13 +14,13 @@
 }
 
 .new-quote {
-  animation: highlightNew 1s forwards;
+  animation: highlightNew 1.5s forwards;
 }
 
 .increase-size {
-  animation: increaseSize 1.5s forwards;
+  animation: increaseSize 2s forwards;
 }
 
 .decrease-size {
-  animation: decreaseSize 1.5s forwards;
+  animation: decreaseSize 2s forwards;
 }

@@ -21,7 +21,7 @@ function MyApp(props: any) {
         <ChakraProvider>
           <Hydrate state={pageProps.dehydratedState}>
             <Head>
-              <title>Contact App</title>
+              <title>Order Buy App</title>
               <meta
                 name="viewport"
                 content="minimum-scale=1, initial-scale=1, width=device-width"

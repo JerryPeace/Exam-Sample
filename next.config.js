@@ -11,7 +11,6 @@ module.exports = withBundleAnalyzer({
   reactStrictMode: false,
   swcMinify: true,
   images: {
-    domains: ['s3-ap-northeast-1.amazonaws.com', 'bit.ly'],
     formats: ['image/avif', 'image/webp'],
   },
   output: 'standalone',

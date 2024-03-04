@@ -1,7 +1,5 @@
 
-# Contact APP
-
-Contact-app is a comprehensive full-stack solution developed using Next.js, providing a seamless experience for users to manage their contacts.
+# Order Buy APP
 
 ### Prerequisites
 *  Requires Node version (v16.20.1)
@@ -18,7 +16,7 @@ Contact-app is a comprehensive full-stack solution developed using Next.js, prov
 
   ```
   docker-compose up
-  open http://localhost:3001/neptune
+  open http://localhost:3001
 
   docker-compose stop
   ```
@@ -31,18 +29,5 @@ Contact-app is a comprehensive full-stack solution developed using Next.js, prov
   ```
   pnpm install
   pnpm run start:local
-  open http://localhost:3001/neptune
+  open http://localhost:3001
   ```
-
-### 2. Running App Tests
-  I use Jest and React Testing Library, React Testing Library is a JavaScript testing utility built specifically to test React components. It simulates user interactions on isolated components and asserts their outputs to ensure the UI is behaving correctly.
-  ```
-  pnpm run test
-  ```
-
-### 3. Setting up the API service
-
-For the backend API service, refer to https://github.com/resumecompanion/taroko_server.git.
-
-Local API Endpoint:
-http://localhost:3000/api

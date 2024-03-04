@@ -41,6 +41,7 @@ const OrderBook: React.FC = () => {
     orderBookWs.onmessage = (event) => {
       const message = JSON.parse(event.data);
       if (message.data?.type === 'snapshot' || message.data?.type === 'delta') {
+        prevOrdersRef.current = orders;
         const updateData = message.data;
         setOrders((prevOrders) => {
           const updatedBuys = updateData.bids.map(([price, size]: any) => ({
@@ -56,7 +57,7 @@ const OrderBook: React.FC = () => {
           const newSells = [...prevOrders.sells, ...updatedSells];
 
           newBuys.sort((a, b) => b.price - a.price);
-          newSells.sort((a, b) => a.price - b.price);
+          newSells.sort((a, b) => b.price - a.price);
 
           const trimmedBuys = newBuys.slice(0, 8);
           const trimmedSells = newSells.slice(0, 8);
@@ -79,7 +80,6 @@ const OrderBook: React.FC = () => {
     };
 
     orderBookWs.onerror = lastPriceWs.onerror = () => toast.error('WebSocket error');
-    prevOrdersRef.current = orders;
     return () => {
       orderBookWs.close();
       lastPriceWs.close();
@@ -124,7 +124,7 @@ const OrderBook: React.FC = () => {
   };
 
   return (
-    <Box bg="#131B29" p={4} color="#F0F4F8" w={300}>
+    <Box bg="#131B29" p={4} color="#F0F4F8" w={310}>
       <ToastContainer />
       <Table size="sm" fontWeight={'bold'}>
         <Thead>
@@ -135,7 +135,7 @@ const OrderBook: React.FC = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {/* Sell orders */}
+          {/* Buys orders */}
           {orders.sells.map((order, index) => (
             <Tr
               key={index}
@@ -158,9 +158,13 @@ const OrderBook: React.FC = () => {
               </Center>
             </Td>
           </Tr>
-          {/* Buy orders */}
+          {/* sells orders */}
           {orders.buys.map((order, index) => (
-            <Tr key={index} {...rowHoverBg}>
+            <Tr
+              key={index}
+              className={getRowClassName(order, true)}
+              style={{ ...rowHoverBg, textAlign: 'center' }}
+            >
               <Td color="#00b15d">{formator.formatPrice(order.price)}</Td>
               <Td textAlign="right">{formator.formatNumber(order.size)}</Td>
               <Td textAlign="right">{calculateTotal(index, true)}</Td>
