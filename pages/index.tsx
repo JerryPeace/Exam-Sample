@@ -84,7 +84,7 @@ const OrderBook: React.FC = () => {
       orderBookWs.close();
       lastPriceWs.close();
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastPrice]);
 
   const calculateTotal = (index: number, isBuy: boolean): string => {
@@ -93,7 +93,7 @@ const OrderBook: React.FC = () => {
     return formator.formatNumber(total);
   };
 
-    const rowHoverBg = { _hover: { backgroundColor: '#1E3059', color: '#F0F4F8' } };
+  const rowHoverBg = { _hover: { backgroundColor: '#1E3059', color: '#F0F4F8' } };
   let lastPriceStyle = { color: '#F0F4F8', backgroundColor: 'rgba(134, 152, 170, 0.12)' };
   let lastPriceIcon = null;
   if (lastPrice && prevLastPriceRef.current !== null) {
@@ -135,7 +135,7 @@ const OrderBook: React.FC = () => {
           </Tr>
         </Thead>
         <Tbody>
-          {/* Buys orders */}
+          {/* sells orders */}
           {orders.sells.map((order, index) => (
             <Tr
               key={index}
@@ -158,7 +158,7 @@ const OrderBook: React.FC = () => {
               </Center>
             </Td>
           </Tr>
-          {/* sells orders */}
+          {/* buys orders */}
           {orders.buys.map((order, index) => (
             <Tr
               key={index}
