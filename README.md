@@ -16,7 +16,7 @@
 
   ```
   docker-compose up
-  open http://localhost:3001
+  open http://localhost:3000
 
   docker-compose stop
   ```
@@ -29,5 +29,5 @@
   ```
   pnpm install
   pnpm run start:local
-  open http://localhost:3001
+  open http://localhost:3000
   ```
